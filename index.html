@@ -20,11 +20,9 @@
 
 
     <script>
-        let x = document.getElementById('x');
         
            
         function Aclick(y) {
-            //x.textContent = 'なんでもいいんすか';
             fetch("https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json")
                 .then(function(response) {
                     return response.json();

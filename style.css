@@ -1,5 +1,28 @@
+
+/*メニューバー*/
+nav {
+    padding-top: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    background-color: dimgray;
+}
+ul {
+  display: flex;
+}
+li {
+  list-style: none;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  margin-right: 35px;
+}
+
+
 button{
-    color:aqua;
+    color:green;
     width: 320px;
     height: 640px;
 }

@@ -1,27 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet"/>
     <title>Document</title>
 </head>
 <body>
+    <image src='kyo-no-wanko.png'>
+    <nav>
+        <ul>
+          <li><a href="#"></a></li>
+          <li><a href="closet.html">アップロード白</a></li>
+          <li><a href="MyCoordinates.html">一日の始まりコーデぇねぇーて</a></li>
+          <li><a href="#">なにぬねなんもねぇ</a></li>
+          <li><a href="#">POOP</a></li>
+        </ul>
+      </nav>
     <h2>今日の服</h2>
-    <button type="button" id="btn1" onclick="Aclick"></button>
+    <h3>うがががが</h3>
+    <h4>💩</h4>
+    <h4></h4>
+    <button type="button" onclick="Aclick(1)">UNKO</button>
+    <button type="button" onclick="location.href='closet.html'">クローゼット</button>
+    <button type="button" onclick="location.href='MyCoordinates.html'">Myコーデ作成</button>
+    <button type="button" onclick="location.href='osusume.html'">今日のおすすめ</button>
+    
+    
     
 
     <p id="x"></p>
 
-
+<!--サイトリンク https://teamtakahashi.github.io/kyo-no-fuku/ -->
     <script>
+        
            
         function Aclick(y) {
-            x.textContent = 'なんでもいいんすか';
-
-
+            fetch("https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json")
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(weather) {
+                    console.log(weather);
+                });
         }
 
 
     </script>
+    <script src="main.js"></script>
 </body>
 </html>

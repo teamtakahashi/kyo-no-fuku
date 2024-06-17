@@ -28,3 +28,47 @@
 </body>
 </html>
 >
+    <nav>
+        <ul>
+          <li class="aaa"><a href="#">うんこ</a></li>
+          <li class="aaa"><a href="#">うんち</a></li>
+          <li class="aaa"><a href="#">大便</a></li>
+          <li class="aaa"><a href="#">排泄物</a></li>
+          <li class="aaa"><a href="#">POOP</a></li>
+        </ul>
+      </nav>
+    <h2>今日の服</h2>
+    <h3>うがががが</h3>
+    <h3>うんちっち</h3>
+    <h3>うんぴっぴ</h3>
+    <h4>💩</h4>
+    <h4></h4>
+    <button type="button" onclick="Aclick(1)">UNKO</button>
+    <button type="button" onclick="location.href='closet.html'">クローゼット</button>
+    <button type="button" onclick="location.href='MyCoordinates.html'">Myコーデ作成</button>
+    <button type="button" onclick="location.href='osusume.html'">今日のおすすめ</button>
+    
+    
+    
+
+    <p id="x"></p>
+
+<!--サイトリンク https://teamtakahashi.github.io/kyo-no-fuku/ -->
+    <script>
+        
+           
+        function Aclick(y) {
+            fetch("https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json")
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(weather) {
+                    console.log(weather);
+                });
+        }
+
+
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

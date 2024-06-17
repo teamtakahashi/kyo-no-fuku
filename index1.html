@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+    <h2>今日の服</h2>
+    <h3>うがががが</h3>
+    <h4></h4>
+    <button type="button" onclick="Aclick(1)">UNKO</button>
+    <button type="button" onclick="location.href='closet.html'">クローゼット</button>
+    <button type="button" onclick="location.href='MyCoordinates.html'">Myコーデ作成</button>
+    <button type="button" onclick="location.href='osusume.html'">今日のおすすめ</button>
+    
+    
+    
+
+    <p id="x"></p>
+
+
+    <script>
+        
+           
+        function Aclick(y) {
+            fetch("https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json")
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(weather) {
+                    console.log(weather);
+                });
+        }
+
+
+    </script>
+    <script src="main.js"></script>
+</body>
+</html>

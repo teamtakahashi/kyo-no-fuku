@@ -3,39 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet"/>
-    <title>Document</title>
+    <title>Teachable Machine Image Model</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <style>
+        #webcam-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        #label-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    <h2>今日の服</h2>
-    <h3>うがががが</h3>
-    <h4></h4>
-    <button type="button" onclick="Aclick(1)">UNKO</button>
-    <button type="button" onclick="location.href='closet.html'">クローゼット</button>
-    <button type="button" onclick="location.href='MyCoordinates.html'">Myコーデ作成</button>
-    <button type="button" onclick="location.href='osusume.html'">今日のおすすめ</button>
-    
-    
-    
-
-    <p id="x"></p>
-
-
-    <script>
-        
-           
-        function Aclick(y) {
-            fetch("https://www.jma.go.jp/bosai/forecast/data/forecast/130000.json")
-                .then(function(response) {
-                    return response.json();
-                })
-                .then(function(weather) {
-                    console.log(weather);
-                });
-        }
-
-
-    </script>
+    <h1>Teachable Machine Image Model</h1>
+    <button type="button" onclick="init()">Start</button>
+    <div id="webcam-container"></div>
+    <div id="label-container"></div>
     <script src="main.js"></script>
 </body>
 </html>
+>

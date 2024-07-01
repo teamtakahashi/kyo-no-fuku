@@ -1,5 +1,5 @@
-document.write("hello world")
-document.write("こーれコミットできません")
+document.write("hello world");
+document.write("こーれコミットできません");
 // the link to your model provided by Teachable Machine export panel
 // the link to your model provided by Teachable Machine export panel
 const URL = "./my_model/";

@@ -5,3 +5,27 @@
   <input id="upload" type="file" name="image" accept="image/*" capture="camera">
   <button type="submit">送信</button>
 </form>
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+    <style>
+        #webcam-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        #label-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+  <!--テーブルマシン-->
+  <h1>Teachable Machine Image Model</h1>
+  <button type="button" onclick="init()">Start</button>
+  <div id="webcam-container"></div>
+  <div id="label-container"></div>
+  <script src="main.js"></script>
+</body>

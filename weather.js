@@ -7,10 +7,12 @@ xmlhttp.onreadystatechange = function() {
     // readyState 4: リクエスト終了, status 200:通信成功
     if (this.readyState == 4 && this.status == 200) {
         var data = this.response;
-        // 天気
-        document.getElementById('unchiw1').innerHTML = "天気 : " + data.weather[0].main + "(" + data.weather[0].description + ")" + "</br>";
-        document.getElementById('unchiw2').innerHTML = "気温 : " + data.main.temp + "</br>"; //データは絶対温度で取得される
-        document.getElementById('unchiw3').innerHTML = "湿度 : " + data.main.humidity + "%" + "</br>";
+        let text = "";
+        text = "天気 : " + data.weather[0].main + "(" + data.weather[0].description + ")" + "</br>"; //天気
+        text += "気温 : " + (data.main.temp-273.15) + "</br>"; //気温は絶対温度で取得される
+        text += "湿度 : " + data.main.humidity + "%" + "</br>"; //湿度
+        // 出力
+        document.getElementById('unchiw').innerHTML = text;
         
 
         console.log(data);

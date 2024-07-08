@@ -12,6 +12,7 @@ xmlhttp.onreadystatechange = function() {
         text += "気温 : " + Math.round((data.main.temp-273.15)*100)/100 + "℃" + "</br>"; //気温は絶対温度で取得される
         text += "湿度 : " + data.main.humidity + "%" + "</br>"; //湿度
         // 出力
+        document.getElementById('unko').innerHTML = "天気API(テスト用)";//天気
         document.getElementById('unchiw').innerHTML = text;//天気
         //現在時刻
         setInterval(() => {

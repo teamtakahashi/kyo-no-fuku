@@ -8,9 +8,9 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var data = this.response;
         // 天気
-        document.getElementById('unchiw1').innerHTML = "天気" + data.weather[0].main + "(" + data.weather[0].description + ")" + "</br>";
-        document.getElementById('unchiw2').innerHTML = "気温" + data.temp + "</br>";
-        document.getElementById('unchiw3').innerHTML = "湿度" + data.humidity + "%" + "</br>";
+        document.getElementById('unchiw1').innerHTML = "天気 : " + data.weather[0].main + "(" + data.weather[0].description + ")" + "</br>";
+        document.getElementById('unchiw2').innerHTML = "気温 : " + data.main.temp + "</br>"; //データは絶対温度で取得される
+        document.getElementById('unchiw3').innerHTML = "湿度 : " + data.main.humidity + "%" + "</br>";
         
 
         console.log(data);

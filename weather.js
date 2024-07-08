@@ -8,7 +8,10 @@ xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var data = this.response;
         // 天気
-        document.getElementById('unchiw').innerHTML = "天気</br>"+data.weather[0].main + "(" + data.weather[0].description + ")";
+        document.getElementById('unchiw').innerHTML = "天気" + data.weather[0].main + "(" + data.weather[0].description + ")" + "</br>";
+        document.getElementById('unchiw').innerHTML = "気温" + data.temp + "</br>";
+        document.getElementById('unchiw').innerHTML = "湿度" + data.humidity + "%" + "</br>";
+        
 
         console.log(data);
     }

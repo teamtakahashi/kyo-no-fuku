@@ -10,7 +10,7 @@ xmlhttp.onreadystatechange = function() {
         let text = "";
         //現在時刻
         let date = new Date();
-        let time = date.getFullYear() +"/"+ date.getMonth +"/" + date.getDate+" " + date.getHours+":" + date.getMinutes+":" + date.getSeconds+"";
+        let time = date.getFullYear() +"/"+ date.getMonth() +"/" + date.getDate() +" " + date.getHours() +":" + date.getMinutes() +":" + date.getSeconds() +"";
         text = "天気 : " + data.weather[0].main + "(" + data.weather[0].description + ")" + "</br>"; //天気
         text += "気温 : " + Math.round((data.main.temp-273.15)*100)/100 + "℃" + "</br>"; //気温は絶対温度で取得される
         text += "湿度 : " + data.main.humidity + "%" + "</br>"; //湿度

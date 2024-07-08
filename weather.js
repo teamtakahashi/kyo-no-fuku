@@ -16,7 +16,7 @@ xmlhttp.onreadystatechange = function() {
         //現在時刻
         setInterval(() => {
             let date = new Date();
-            let time = date.getFullYear() +"/"+ date.getMonth() +"/" + date.getDate() +" " 
+            let time = date.getFullYear() +"/"+ (date.getMonth()+1) +"/" + date.getDate() +" " 
                 + date.getHours() +":" + date.getMinutes() +":" + date.getSeconds() +"";
             document.getElementById('hentai').innerHTML = time;//時刻
         }, 1000);

@@ -1,25 +1,35 @@
 // 配列の定義
-const items = ["value1", "value2", "value3", "value4","value5"]; // 配列の要素数に応じてラジオボタンが増加
+const ue = ["ue1", "ue2", "ue3", "ue4","ue5"]; // 配列の要素数に応じてラジオボタンが増加
+const  sita= ["sita1", "sita2", "sita3", "sita4","sita5"]; // 配列の要素数に応じてラジオボタンが増加
+
 
 // ラジオボタンを追加するコンテナを取得
-const container = document.getElementById('radio-buttons-container');
+function radio(radio_name,arrayData){
+    const container = document.getElementById('radio-buttons-container');
 
-// 配列の要素数に基づいてラジオボタンを生成し、コンテナに追加
-for (let i = 0; i < items.length; i++) {
-    // ラジオボタンの要素を作成
-    const radioButton = document.createElement('input');
-    radioButton.type = 'radio';
-    radioButton.name = 'han_radio';
-    radioButton.value = items[i];
+    //データベースから持ってくる場合は、正規表現を用いて服のジャンルごとにもってきて並べる。恐らくラジオボタンのnameを統一すれば一つ選択のみになる
 
-    // ラベル要素を作成
-    const label = document.createElement('label');
-    label.textContent = items[i];
-    label.appendChild(radioButton);
+    // 配列の要素数に基づいてラジオボタンを生成し、コンテナに追加
+    for (let i = 0; i < arrayData.length; i++) {
+        // ラジオボタンの要素を作成
+        const radioButton = document.createElement('input');
+        radioButton.type = 'radio';
+        radioButton.name = radio_name;
+        radioButton.value = arrayData[i];
 
-    // コンテナにラジオボタンとラベルを追加
-    container.appendChild(label);
+        // ラベル要素を作成
+        const label = document.createElement('label');
+        label.textContent = arrayData[i];
+        label.appendChild(radioButton);
 
-    // 改行を追加（見やすくするため）
-    container.appendChild(document.createElement('br'));
+        // コンテナにラジオボタンとラベルを追加
+        container.appendChild(label);
+
+        // 改行を追加（見やすくするため）
+       container.appendChild(document.createElement('br'));
+    }
 }
+
+radio("uefuku",ue)
+
+radio("sitafuku",sita)

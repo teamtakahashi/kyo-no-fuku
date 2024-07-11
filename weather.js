@@ -42,7 +42,7 @@ xmlhttp.onreadystatechange = function() {
             }else if(12 <= data.main.temp_max - data.main.temp_min){
                 document.getElementById('oppai').innerHTML = "半袖と上着";//気温差12℃以上は半袖に上着羽織る
             }else{
-                document.getElementById('oppai').innerHTML = "長袖でも長袖でも好きなほう";//どっちでも大丈夫そう
+                document.getElementById('oppai').innerHTML = "好きな服着よう"; //どっちでも大丈夫そう
             }
         }
         /*オプション (あったらつけるやつ)*/

@@ -21,16 +21,18 @@ xmlhttp.onreadystatechange = function() {
         }, 1000);
 
         console.log(data);
+
+        /*今日のコーデ作成*/
+        //天気、気温、湿度をもとに適切な服をランダムに選ぶ
+        if(data.weather[0].main == "Clouds"){
+            document.getElementById('oppai').innerHTML = "くもり！";//天気
+        }else if(data.weather[0].main == "Rain"){
+            document.getElementById('oppai').innerHTML = "あめ！";//天気
+        }
+        
     }
 }
 
-/*今日のコーデ作成*/
-//天気、気温、湿度をもとに適切な服をランダムに選ぶ
-if(data.weather[0].main == "Clouds"){
-    document.getElementById('oppai').innerHTML = "くもり！";//天気
-}else if(data.weather[0].main == "Rain"){
-    document.getElementById('oppai').innerHTML = "あめ！";//天気
-}
 
 
 xmlhttp.open("GET", strUrl, true);  // 第３引数の意味 (非同期通信：true、同期通信：false)

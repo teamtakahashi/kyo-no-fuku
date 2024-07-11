@@ -22,19 +22,36 @@ xmlhttp.onreadystatechange = function() {
 
         console.log(data);
 
-        /*今日のコーデ作成*/
-        //天気、気温、湿度をもとに適切な服をランダムに選ぶ
-        if(data.weather[0].main == "Clouds"){
-            document.getElementById('oppai').innerHTML = "くもり！";//天気
-        }else if(data.weather[0].main == "Rain"){
-            document.getElementById('oppai').innerHTML = "あめ！";//天気
-        }
-        if(25 <= Math.round((data.main.temp-273.15)*100)/100){
-            document.getElementById('oppai2').innerHTML = "あつい!!";//天気
-        }else if(Math.round((data.main.temp-273.15)*100)/100 <= 10){
-            document.getElementById('oppai2').innerHTML = "さむい!!";//天気
+        /*今日のコーデ作成 --- 天気、気温、湿度をもとに適切な服をランダムに選ぶ*/
+        if(data.weather[0].main == "Snow"){     //雪が降る日は厚手の長袖長ズボン、あれば上着羽織る
+            document.getElementById('oppai').innerHTML = "厚手の長袖長ズボンor上着";
         }else{
-            document.getElementById('oppai2').innerHTML = "快適!!";//天気
+            if(30 <= Math.round((data.main.temp_max-273.15)*100)/100){
+                if(65 <= data.main.humidity){
+                    document.getElementById('oppai').innerHTML = "半袖半ズボン";//じめじめするので半ズボン
+                }else{
+                    document.getElementById('oppai').innerHTML = "半袖";//最高気温30℃超えたら半袖(半ズボンは自由)
+                }
+            }else if(Math.round((data.main.temp_max-273.15)*100)/100 < 20){
+                if(Math.round((data.main.temp_max-273.15)*100)/100 <= 5){
+                    document.getElementById('oppai').innerHTML = "厚手の長袖";//最高気温5℃未満は厚手の長袖
+                }else{
+                    document.getElementById('oppai').innerHTML = "長袖";//最高気温20℃未満は長袖
+                }
+                
+            }else if(12 <= data.main.temp_max - data.main.temp_min){
+                document.getElementById('oppai').innerHTML = "半袖と上着";//気温差12℃以上は半袖に上着羽織る
+            }else{
+                document.getElementById('oppai').innerHTML = "好きな服着よう"; //どっちでも大丈夫そう
+            }
+        }
+        /*オプション (あったらつけるやつ)*/
+        if(data.weather[0].main == "Snow" || data.weather[0].main == "Rain"){
+            document.getElementById('oppai2').innerHTML = "長靴"; //雨か雪だと長靴
+        }else if(data.weather[0].main == "Clear" && 30 <= Math.round((data.main.temp_max-273.15)*100)/100){
+            document.getElementById('oppai2').innerHTML = "帽子"; //晴れていて気温30℃以上だと帽子
+        }else if(Math.round((data.main.temp-273.15)*100)/100 <= 5){
+            document.getElementById('oppai2').innerHTML = "マフラー";//気温5℃以下だとマフラー
         }
     }
 }

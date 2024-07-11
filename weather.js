@@ -29,7 +29,11 @@ xmlhttp.onreadystatechange = function() {
         }else if(data.weather[0].main == "Rain"){
             document.getElementById('oppai').innerHTML = "あめ！";//天気
         }
-        
+        if(25 <= Math.round((data.main.temp-273.15)*100)/100){
+            document.getElementById('oppai2').innerHTML = "あつい!!";//天気
+        }else if(Math.round((data.main.temp-273.15)*100)/100 <= 10){
+            document.getElementById('oppai2').innerHTML = "さむい!!";//天気
+        }
     }
 }
 

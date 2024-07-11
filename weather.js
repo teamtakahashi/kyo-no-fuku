@@ -17,14 +17,29 @@ xmlhttp.onreadystatechange = function() {
         //現在時刻
         setInterval(() => {
             let date = new Date();
-            //let time = date.getFullYear() +"/"+ (date.getMonth()+1) +"/" + date.getDate() +" " 
-            //    + date.getHours() +":" + date.getMinutes() +":" + date.getSeconds() +"";
             document.getElementById('hentai').innerHTML = date;//時刻
         }, 1000);
 
         console.log(data);
+
+        /*今日のコーデ作成*/
+        //天気、気温、湿度をもとに適切な服をランダムに選ぶ
+        if(data.weather[0].main == "Clouds"){
+            document.getElementById('oppai').innerHTML = "くもり！";//天気
+        }else if(data.weather[0].main == "Rain"){
+            document.getElementById('oppai').innerHTML = "あめ！";//天気
+        }
+        if(25 <= Math.round((data.main.temp-273.15)*100)/100){
+            document.getElementById('oppai2').innerHTML = "あつい!!";//天気
+        }else if(Math.round((data.main.temp-273.15)*100)/100 <= 10){
+            document.getElementById('oppai2').innerHTML = "さむい!!";//天気
+        }else{
+            document.getElementById('oppai2').innerHTML = "快適!!";//天気
+        }
     }
 }
+
+
 
 xmlhttp.open("GET", strUrl, true);  // 第３引数の意味 (非同期通信：true、同期通信：false)
 xmlhttp.responseType = 'json'; // JSONを取得するために必要

@@ -1,5 +1,8 @@
 <?php include 'db.php'; ?>
 <?php session_start(); ?>
+<? 
+echo "php";
+?>
 
 <!DOCTYPE html>
 <html lang="ja">

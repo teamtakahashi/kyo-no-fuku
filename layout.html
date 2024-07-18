@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #webcam-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+        #label-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <title>今日の服</title>
+</head>
+<body>
+    <header alt="top">
+        <img src="kyo-no-wanko.png" alt="header_img" style="max-width: 100%; height: auto;">
+        <h1>今日の服</h1>
+        <!-- タイトル -->
+        <hr>
+    </header>
+    {% block body %}
+    {% endbody %}
+
+    <footer>
+        <p>&copy;teamtakahashi</p>
+    </footer>   
+    
+</body>
+</html>

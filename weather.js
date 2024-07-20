@@ -52,6 +52,8 @@ xmlhttp.onreadystatechange = function() {
             document.getElementById('oppai2').innerHTML = "帽子"; //晴れていて気温30℃以上だと帽子
         }else if(Math.round((data.main.temp-273.15)*100)/100 <= 5){
             document.getElementById('oppai2').innerHTML = "マフラー";//気温5℃以下だとマフラー
+        }else{
+            document.getElementById('oppai2').innerHTML = "スニーカー & アクセサリー"; //過ごしやすい気温の場合
         }
     }
 }

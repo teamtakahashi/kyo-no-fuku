@@ -24,7 +24,7 @@ xmlhttp.onreadystatechange = function() {
 
         /*今日のコーデ作成 --- 天気、気温、湿度をもとに適切な服をランダムに選ぶ*/
         if(data.weather[0].main == "Snow"){     //雪が降る日は厚手の長袖長ズボン、あれば上着羽織る
-            document.getElementById('oppai').innerHTML = "厚手の長袖長ズボンor上着";
+            document.getElementById('oppai').innerHTML = "厚手の長袖長ズボン もしくは 上着";
         }else{
             if(30 <= Math.round((data.main.temp_max-273.15)*100)/100){
                 if(65 <= data.main.humidity){
@@ -57,6 +57,7 @@ xmlhttp.onreadystatechange = function() {
         }
     }
 }
+
 
 
 

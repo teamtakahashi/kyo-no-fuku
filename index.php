@@ -34,7 +34,7 @@ echo "php";
         <hr>
         <nav class="manu"
             <ol>
-                <li class="crumb"><a href="#top">topだよん</a></li>
+                <li class="crumb"><a href="#top">top</a></li>
                 <li class="crumb"><a href="#recommendation">おすすめ</a></li>
                 <li class="crumb"><a href="#search">コーデ検索</a></li>
             </ol>
@@ -47,7 +47,7 @@ echo "php";
             <section class="recommendation" alt="recommendation">
                 <!-- おすすめ -->
                 <div class="wrapper">
-                    <h2>おすすめコーデ</h2>
+                    <h2>おすすめコーデ!</h2>
                     <p>今日のおすすめコーデ</p>
 
                     <img src="fuku1.png" alt="" style="max-width: 50%; height: auto;">

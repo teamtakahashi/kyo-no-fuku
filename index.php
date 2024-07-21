@@ -250,7 +250,7 @@
                                     echo '<img class="image" src=" ' . $cloth_id . ' " alt="cloth Image" "><br>';
                                 }
                             } else {
-                                echo "見つからなよー.<br>";
+                                echo "見つからないよー.<br>";
                             }
                         } else {
                             echo "Query 無理だ―.<br>";

@@ -92,7 +92,7 @@ echo "php";
             
             <div class="coordination">
                 <!-- コーディネート -->
-                 <button onclick="location.href='coordination'">Myコーデ</button>
+                 <button onclick="location.href='mycode.php'">Myコーデ</button>
                 <!-- <a href="coordination.php" class="button">Myコーデ</a> -->
             </div>            
         </article> 

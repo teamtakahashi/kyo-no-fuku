@@ -1,1 +1,0 @@
-# kyo-no-fuku

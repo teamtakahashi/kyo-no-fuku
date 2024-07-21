@@ -1,0 +1,130 @@
+
+* {
+    text-align: center;
+}
+
+.header-top {
+    display: flex;
+    margin: auto;
+}
+.header-low {
+    display: flex;
+
+}
+
+nav {
+    background-color:rgb(182, 212, 215);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: 8px auto;
+    list-style: none;
+    
+    
+}
+
+nav ul li {
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.topick {
+    background-color:rgb(182, 212, 215);
+}
+
+
+.image {
+    width:50%;
+    height:auto;
+}
+
+
+.carousel-section {
+    width: 20%; /* 画面の半分の幅 */
+    margin: auto; /* 中央に配置 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.carousel {
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.carousel-slide img {
+    width: 100%;
+    vertical-align: middle;
+    cursor: pointer; /* クリック可能にする */
+}
+
+.carousel-buttons {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.image-src-display {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+}
+   
+
+
+/* スマホ用ヘッダのスタイル*/
+@media screen and (max-width:960px) {
+    .logo {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 32px;
+    }
+
+    .image {
+        width:50%;
+        height:auto;
+    }
+  
+
+}
